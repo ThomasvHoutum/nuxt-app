@@ -1,4 +1,5 @@
 <template>
+  {{ blogsCount }}
   <div v-for="index in blogsCount">
 
   </div>
@@ -12,7 +13,8 @@ export default {
     }
   },
   async mounted() {
-    this.blogsCount = await $fetch('/api/blogs/get-blog-count')
+    this.blogsCount = await $fetch('/api/blogs/get-blog-count');
+    console.log(this.blogsCount);
   }
 }
 </script>
