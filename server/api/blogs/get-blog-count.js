@@ -3,7 +3,7 @@ import * as path from "node:path";
 
 export default defineEventHandler(async () => {
 
-    const POSTS_DIRECTORY = path.join(process.cwd(), `${process.env.NODE_ENV === 'development' ? "public" : ""}`, 'blogs');
+    const POSTS_DIRECTORY = path.join(process.cwd(), "public", 'blogs');
 
     const files = fs.readdirSync(POSTS_DIRECTORY);
 
